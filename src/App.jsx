@@ -618,8 +618,8 @@ export default function App() {
           />
         </div>
         <div className="progress-meta">
-          <span>Started: October 22, 2026 ({daysPassed} days passed)</span>
-          <span>Target: March 2, 2027</span>
+          <span>Started: Oct 22, 2026</span>
+          <span className="progress-meta-target">Target: Mar 2, 2027</span>
         </div>
       </section>
 
