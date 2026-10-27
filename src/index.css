@@ -1,0 +1,81 @@
+/* Modern Design System with Dynamic Theming */
+:root {
+  /* Default Accent Palette (Emerald / Cyber Neon) */
+  --accent-hue: 160;
+  --accent-sat: 84%;
+  --accent-light: 45%;
+
+  --accent-primary: hsl(var(--accent-hue), var(--accent-sat), var(--accent-light));
+  --accent-glow: hsla(var(--accent-hue), var(--accent-sat), var(--accent-light), 0.35);
+  --accent-soft: hsla(var(--accent-hue), var(--accent-sat), var(--accent-light), 0.12);
+  --accent-gradient: linear-gradient(135deg, hsl(var(--accent-hue), var(--accent-sat), 52%), hsl(calc(var(--accent-hue) + 40), 90%, 55%));
+
+  /* Dark Theme Tokens (Default) */
+  --bg-app: #080b12;
+  --bg-surface: rgba(18, 24, 38, 0.7);
+  --bg-surface-elevated: rgba(26, 34, 54, 0.85);
+  --bg-card: rgba(23, 31, 51, 0.65);
+  --bg-card-border: rgba(255, 255, 255, 0.08);
+  --bg-card-hover: rgba(30, 41, 68, 0.85);
+
+  --text-main: #f3f6fc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 30px var(--accent-glow);
+  --glass-blur: blur(20px);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] {
+  --bg-app: #f8fafc;
+  --bg-surface: rgba(255, 255, 255, 0.85);
+  --bg-surface-elevated: rgba(255, 255, 255, 0.95);
+  --bg-card: rgba(255, 255, 255, 0.75);
+  --bg-card-border: rgba(15, 23, 42, 0.08);
+  --bg-card-hover: rgba(255, 255, 255, 1);
+
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.12), 0 0 25px var(--accent-soft);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.2s ease, box-shadow 0.35s ease;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .digit-font {
+  font-family: 'Outfit', sans-serif;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input {
+  font-family: inherit;
+}
